@@ -1,0 +1,29 @@
+{
+    "name": "impresscms/icms-extensions-descriptor",
+    "description": "Library that stores info readers to read ImpressCMS themes and modules formats",
+    "type": "library",
+    "require": {
+        "imponeer/extension-info-contracts": "^0.1.0",
+        "composer/composer": "^1.0 || ^2.0",
+        "php": ">=7.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raimondas Rimkevičius",
+            "email": "github@mekdrop.name"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ImpressCMS\\Descriptor\\": "src/"
+        }
+    },
+    "keywords": [
+        "theme",
+        "module",
+        "describer",
+        "impresscms",
+        "descriptor"
+    ]
+}
