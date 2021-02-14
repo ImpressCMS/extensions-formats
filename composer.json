@@ -3,7 +3,7 @@
     "description": "Library that stores info readers to read ImpressCMS themes and modules formats",
     "type": "library",
     "require": {
-        "imponeer/extension-info-contracts": "^0.1.0",
+        "imponeer/extension-info-contracts": "^0.2",
         "composer/composer": "^1.0 || ^2.0",
         "php": ">=7.2"
     },
