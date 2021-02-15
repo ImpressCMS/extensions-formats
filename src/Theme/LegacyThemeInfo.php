@@ -1,6 +1,6 @@
 <?php
 
-namespace ImpressCMS\Descriptor\Theme\Legacy;
+namespace ImpressCMS\Descriptor\Theme;
 
 use DateTime;
 use Imponeer\Contracts\ExtensionInfo\Enum\ExtensionState;
@@ -13,9 +13,9 @@ use League\Flysystem\StorageAttributes;
 /**
  * Describes legacy theme
  *
- * @package ImpressCMS\Descriptor\Theme\Legacy
+ * @package ImpressCMS\Descriptor\Theme
  */
-class LegacyThemeInfo implements \ImpressCMS\Descriptor\Theme\ThemeInfoInterface
+class LegacyThemeInfo implements ThemeInfoInterface
 {
     use ImpressCMSExtensionTrait;
 

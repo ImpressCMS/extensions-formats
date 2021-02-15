@@ -1,6 +1,6 @@
 <?php
 
-namespace ImpressCMS\Descriptor\Theme\Composer;
+namespace ImpressCMS\Descriptor\Theme;
 
 use Composer\Package\Package;
 use Imponeer\Contracts\ExtensionInfo\Exceptions\UnsupportedExtensionException;
@@ -13,7 +13,7 @@ use ImpressCMS\Descriptor\Shared\Traits\ComposerFactoryTrait;
 /**
  * Creates Composer Theme Info readers
  *
- * @package ImpressCMS\Descriptor\Theme\Composer
+ * @package ImpressCMS\Descriptor\Theme
  */
 class ComposerThemeInfoFactory implements FromPathFactoryInterface, ExtensionInfoFactoryInterface, FromComposerPackageFactoryInterface
 {

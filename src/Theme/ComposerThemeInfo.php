@@ -1,6 +1,6 @@
 <?php
 
-namespace ImpressCMS\Descriptor\Theme\Composer;
+namespace ImpressCMS\Descriptor\Theme;
 
 use Imponeer\Contracts\ExtensionInfo\Enum\ExtensionType;
 use Imponeer\Contracts\ExtensionInfo\Enum\ScreenshotType;
@@ -11,9 +11,9 @@ use ImpressCMS\Descriptor\Shared\Traits\ImpressCMSExtensionTrait;
 /**
  * Describes theme from composer
  *
- * @package ImpressCMS\Descriptor\Theme\Composer
+ * @package ImpressCMS\Descriptor\Theme
  */
-class ComposerThemeInfo implements \ImpressCMS\Descriptor\Theme\ThemeInfoInterface
+class ComposerThemeInfo implements ThemeInfoInterface
 {
     use ComposerPackageReaderTrait, ImpressCMSExtensionTrait;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ImpressCMS\Descriptor\Theme\Legacy;
+namespace ImpressCMS\Descriptor\Theme;
 
 use Imponeer\Contracts\ExtensionInfo\Exceptions\UnsupportedExtensionException;
 use Imponeer\Contracts\ExtensionInfo\ExtensionInfoFactoryInterface;
@@ -10,7 +10,7 @@ use Imponeer\Contracts\ExtensionInfo\Factory\FromPathFactoryInterface;
 /**
  * Factory to make legacy theme info readers
  *
- * @package ImpressCMS\Descriptor\Theme\Legacy
+ * @package ImpressCMS\Descriptor\Theme
  */
 class LegacyThemeInfoFactory implements ExtensionInfoFactoryInterface, FromPathFactoryInterface
 {
