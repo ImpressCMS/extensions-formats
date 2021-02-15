@@ -26,14 +26,6 @@ class ComposerThemeInfo implements \ImpressCMS\Descriptor\Theme\ThemeInfoInterfa
     }
 
     /**
-     * @inheritDoc
-     */
-    public function getLinkedObject()
-    {
-
-    }
-
-    /**
      * Gets screenshots
      *
      * @return Screenshot[]
