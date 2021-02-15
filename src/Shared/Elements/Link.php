@@ -2,6 +2,7 @@
 
 namespace ImpressCMS\Descriptor\Shared\Elements;
 
+use Imponeer\Contracts\ExtensionInfo\Elements\LinkInterface;
 use Imponeer\Contracts\ExtensionInfo\Enum\LinkType;
 
 /**
@@ -9,7 +10,7 @@ use Imponeer\Contracts\ExtensionInfo\Enum\LinkType;
  *
  * @package ImpressCMS\Descriptor\Shared\Elements
  */
-class Link implements \Imponeer\Contracts\ExtensionInfo\Elements\LinkInterface
+class Link implements LinkInterface
 {
     /**
      * @var string

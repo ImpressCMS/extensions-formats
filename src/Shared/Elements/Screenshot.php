@@ -2,6 +2,7 @@
 
 namespace ImpressCMS\Descriptor\Shared\Elements;
 
+use Imponeer\Contracts\ExtensionInfo\Elements\ScreenshotInterface;
 use Imponeer\Contracts\ExtensionInfo\Enum\ScreenshotType;
 
 /**
@@ -9,7 +10,7 @@ use Imponeer\Contracts\ExtensionInfo\Enum\ScreenshotType;
  *
  * @package ImpressCMS\Descriptor\Shared\Elements
  */
-class Screenshot implements \Imponeer\Contracts\ExtensionInfo\Elements\ScreenshotInterface
+class Screenshot implements ScreenshotInterface
 {
 
     /**

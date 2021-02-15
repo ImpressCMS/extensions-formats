@@ -1,10 +1,15 @@
 <?php
 
-
 namespace ImpressCMS\Descriptor\Shared\Elements;
 
+use Imponeer\Contracts\ExtensionInfo\Elements\RelatedPackageInterface;
 
-class RelatedPackage implements \Imponeer\Contracts\ExtensionInfo\Elements\RelatedPackageInterface
+/**
+ * RelatedPackage instance
+ *
+ * @package ImpressCMS\Descriptor\Shared\Elements
+ */
+class RelatedPackage implements RelatedPackageInterface
 {
     /**
      * @var string

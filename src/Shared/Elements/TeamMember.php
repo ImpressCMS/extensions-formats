@@ -2,6 +2,7 @@
 
 namespace ImpressCMS\Descriptor\Shared\Elements;
 
+use Imponeer\Contracts\ExtensionInfo\Elements\MemberInterface;
 use Imponeer\Contracts\ExtensionInfo\Enum\MemberRole;
 
 /**
@@ -9,7 +10,7 @@ use Imponeer\Contracts\ExtensionInfo\Enum\MemberRole;
  *
  * @package ImpressCMS\Descriptor\Shared\Elements
  */
-class TeamMember implements \Imponeer\Contracts\ExtensionInfo\Elements\MemberInterface
+class TeamMember implements MemberInterface
 {
 
     /**
