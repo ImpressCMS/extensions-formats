@@ -3,8 +3,6 @@
 namespace ImpressCMS\Descriptor\Theme;
 
 use Imponeer\Contracts\ExtensionInfo\Enum\ExtensionType;
-use Imponeer\Contracts\ExtensionInfo\Enum\ScreenshotType;
-use ImpressCMS\Descriptor\Shared\Elements\Screenshot;
 use ImpressCMS\Descriptor\Shared\Traits\ComposerPackageReaderTrait;
 use ImpressCMS\Descriptor\Shared\Traits\ImpressCMSExtensionTrait;
 
@@ -23,38 +21,6 @@ class ComposerThemeInfo implements ThemeInfoInterface
     public function getType(): ExtensionType
     {
         return ExtensionType::THEME();
-    }
-
-    /**
-     * Gets screenshots
-     *
-     * @return Screenshot[]
-     */
-    public function getScreenshots(): array
-    {
-        $ret = [];
-
-        $screenshots = $this->getExtraValue('screenshots', []);
-
-        if (isset($screenshots['admin'])) {
-            foreach ((array)$screenshots['admin'] as $url) {
-                $ret[] = new Screenshot(
-                    ScreenshotType::ADMIN_SIDE(),
-                    $url
-                );
-            }
-        }
-
-        if (isset($screenshots['user'])) {
-            foreach ((array)$screenshots['user'] as $url) {
-                $ret[] = new Screenshot(
-                    ScreenshotType::USER_SIDE(),
-                    $url
-                );
-            }
-        }
-
-        return $ret;
     }
 
     /**

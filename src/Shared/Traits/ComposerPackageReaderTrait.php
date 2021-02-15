@@ -4,6 +4,8 @@ namespace ImpressCMS\Descriptor\Shared\Traits;
 
 use Composer\Package\CompletePackageInterface;
 use Imponeer\Contracts\ExtensionInfo\Enum\ExtensionState;
+use Imponeer\Contracts\ExtensionInfo\Enum\ScreenshotType;
+use ImpressCMS\Descriptor\Shared\Elements\Screenshot;
 use League\Flysystem\Filesystem;
 use League\Flysystem\Local\LocalFilesystemAdapter;
 
@@ -117,6 +119,38 @@ trait ComposerPackageReaderTrait
     public function getPath(): string
     {
         return $this->package->getTargetDir();
+    }
+
+    /**
+     * Gets screenshots
+     *
+     * @return Screenshot[]
+     */
+    public function getScreenshots(): array
+    {
+        $ret = [];
+
+        $screenshots = (array)$this->getExtraValue('screenshots', []);
+
+        if (isset($screenshots['admin'])) {
+            foreach ((array)$screenshots['admin'] as $url) {
+                $ret[] = new Screenshot(
+                    ScreenshotType::ADMIN_SIDE(),
+                    $url
+                );
+            }
+        }
+
+        if (isset($screenshots['user'])) {
+            foreach ((array)$screenshots['user'] as $url) {
+                $ret[] = new Screenshot(
+                    ScreenshotType::USER_SIDE(),
+                    $url
+                );
+            }
+        }
+
+        return $ret;
     }
 
 }
