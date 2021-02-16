@@ -5,6 +5,7 @@ namespace ImpressCMS\Descriptor\Shared\Traits;
 use Composer\Factory;
 use Composer\IO\IOInterface;
 use Composer\IO\NullIO;
+use Composer\Package\Package;
 use Composer\Package\RootPackageInterface;
 use Imponeer\Contracts\ExtensionInfo\ExtensionInfoInterface;
 
@@ -74,6 +75,14 @@ trait ComposerFactoryTrait
         return $this->supportsPackage(
             $this->readPathAsComposerPackage($path)
         );
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function supportsPackage(Package $package): bool
+    {
+        return $package->getType() === $this->getSupportedPackageTypes()[0];
     }
 
 }

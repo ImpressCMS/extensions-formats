@@ -36,8 +36,8 @@ class ComposerThemeInfoFactory implements FromPathFactoryInterface, ExtensionInf
     /**
      * @inheritDoc
      */
-    public function supportsPackage(Package $package): bool
+    public function getSupportedPackageTypes(): array
     {
-        return $package->getType() === 'impresscms-theme';
+        return ['impresscms-theme'];
     }
 }
