@@ -2,12 +2,16 @@
 
 namespace ImpressCMS\Descriptor\Theme;
 
+use Imponeer\Contracts\ExtensionInfo\ExtensionInfoInterface;
+use Imponeer\Contracts\ExtensionInfo\Features\SupportsAssetsInterface;
+use Imponeer\Contracts\ExtensionInfo\Features\SupportsScreenshotsInterface;
+
 /**
  * Interface that defines admin descriptor
  *
  * @package ImpressCMS\Descriptor
  */
-interface ThemeInfoInterface extends \Imponeer\Contracts\ExtensionInfo\ExtensionInfoInterface, \Imponeer\Contracts\ExtensionInfo\Features\SupportsScreenshotsInterface
+interface ThemeInfoInterface extends ExtensionInfoInterface, SupportsScreenshotsInterface, SupportsAssetsInterface
 {
 
     /**

@@ -6,6 +6,7 @@ use DateTime;
 use Imponeer\Contracts\ExtensionInfo\Enum\ExtensionState;
 use Imponeer\Contracts\ExtensionInfo\Enum\ExtensionType;
 use ImpressCMS\Descriptor\Shared\Traits\ImpressCMSExtensionTrait;
+use ImpressCMS\Descriptor\Shared\Traits\LegacyAssetsTrait;
 use League\Flysystem\Filesystem;
 use League\Flysystem\Local\LocalFilesystemAdapter;
 use League\Flysystem\StorageAttributes;
@@ -17,7 +18,7 @@ use League\Flysystem\StorageAttributes;
  */
 class LegacyThemeInfo implements ThemeInfoInterface
 {
-    use ImpressCMSExtensionTrait;
+    use ImpressCMSExtensionTrait, LegacyAssetsTrait;
 
     /**
      * @var string

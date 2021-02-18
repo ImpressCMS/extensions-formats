@@ -11,6 +11,7 @@ use ImpressCMS\Descriptor\Shared\Elements\RelatedPackage;
 use ImpressCMS\Descriptor\Shared\Elements\Template;
 use ImpressCMS\Descriptor\Shared\Traits\ComposerPackageReaderTrait;
 use ImpressCMS\Descriptor\Shared\Traits\ImpressCMSExtensionTrait;
+use ImpressCMS\Descriptor\Shared\Traits\LegacyAssetsTrait;
 
 /**
  * Defines composer module info
@@ -19,7 +20,7 @@ use ImpressCMS\Descriptor\Shared\Traits\ImpressCMSExtensionTrait;
  */
 class ComposerModuleInfo implements ModuleInfoInterface
 {
-    use ComposerPackageReaderTrait, ImpressCMSExtensionTrait;
+    use ComposerPackageReaderTrait, ImpressCMSExtensionTrait, LegacyAssetsTrait;
 
     /**
      * @inheritDoc
@@ -41,14 +42,6 @@ class ComposerModuleInfo implements ModuleInfoInterface
                 $link->getDescription()
             );
         }
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getAssets(): iterable
-    {
-        // TODO: Implement getAssets() method.
     }
 
     /**

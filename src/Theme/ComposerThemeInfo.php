@@ -5,6 +5,7 @@ namespace ImpressCMS\Descriptor\Theme;
 use Imponeer\Contracts\ExtensionInfo\Enum\ExtensionType;
 use ImpressCMS\Descriptor\Shared\Traits\ComposerPackageReaderTrait;
 use ImpressCMS\Descriptor\Shared\Traits\ImpressCMSExtensionTrait;
+use ImpressCMS\Descriptor\Shared\Traits\LegacyAssetsTrait;
 
 /**
  * Describes theme from composer
@@ -13,7 +14,7 @@ use ImpressCMS\Descriptor\Shared\Traits\ImpressCMSExtensionTrait;
  */
 class ComposerThemeInfo implements ThemeInfoInterface
 {
-    use ComposerPackageReaderTrait, ImpressCMSExtensionTrait;
+    use ComposerPackageReaderTrait, ImpressCMSExtensionTrait, LegacyAssetsTrait;
 
     /**
      * @inheritDoc
