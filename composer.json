@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "imponeer/extension-info-contracts": "^0.3",
-        "composer/composer": ">2.1.9",
+        "composer/composer": "^2.1.14",
         "php": ">=7.3"
     },
     "license": "MIT",
